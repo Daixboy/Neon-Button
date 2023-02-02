@@ -1,0 +1,51 @@
+* {
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+}
+
+.btn {
+    color: rgb(255, 255, 255);
+    padding: 14px;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 15px;
+    border: 2px solid;
+    box-shadow: 0 0 20px #4400ff;
+    transition: 400ms ease-in-out;
+}
+
+/*
+.btn:hover {
+    border-radius: 30px;
+    transform: scale(1.1);
+    color: black;
+    box-shadow: 0 0 20px #4400ff, 0 0 20px #4400ff63 inset;
+} */
+
+/* The animation code */
+@keyframes glow-animation {
+    0% {
+        box-shadow: 0 0 20px #4400ff;
+        transform: scale(0.5);
+    }
+
+
+    100% {
+        box-shadow: 0 0 20px #4400ff;
+        transform: scale(1.2)
+    }
+}
+
+/* The element to apply the animation to */
+.btn {
+    box-shadow: 0 0 20px #4400ff;
+    animation: glow-animation 2s infinite alternate ease-in-out;
+}
